@@ -48,3 +48,5 @@ text.txt
 agents
 skills
 skills-lock.json
+
+node_modules/
