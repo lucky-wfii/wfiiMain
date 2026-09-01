@@ -240,18 +240,46 @@ const EventDetailsModal = ({
 
 	// Escape closes the modal.
 	useEffect(() => {
-		const handleKeyDown = (event: KeyboardEvent) => {
-			if (event.key === "Escape") {
-				onClose();
-			}
-		};
+		const html = document.documentElement;
+		const body = document.body;
+		const scrollY = window.scrollY;
 
-		window.addEventListener("keydown", handleKeyDown);
+		if (lenis) {
+			lenis.stop();
+		}
+
+		const scrollbarWidth = window.innerWidth - html.clientWidth;
+
+		// Physically lock the body in place instead of relying on overflow:hidden,
+		// which Lenis / iOS Safari can bypass.
+		body.style.position = "fixed";
+		body.style.top = `-${scrollY}px`;
+		body.style.left = "0";
+		body.style.right = "0";
+		body.style.width = "100%";
+		html.style.overscrollBehavior = "none";
+
+		if (scrollbarWidth > 0) {
+			body.style.paddingRight = `${scrollbarWidth}px`;
+		}
 
 		return () => {
-			window.removeEventListener("keydown", handleKeyDown);
+			body.style.position = "";
+			body.style.top = "";
+			body.style.left = "";
+			body.style.right = "";
+			body.style.width = "";
+			body.style.paddingRight = "";
+			html.style.overscrollBehavior = "";
+
+			// Restore scroll position exactly where the user left off.
+			window.scrollTo(0, scrollY);
+
+			if (lenis) {
+				lenis.start();
+			}
 		};
-	}, [onClose]);
+	}, [lenis]);
 
 	return (
 		<div
@@ -298,6 +326,7 @@ const EventDetailsModal = ({
 					    min-h-0 is important for flex scrolling.
 					    ===================================================== */}
 					<div
+						data-lenis-prevent
 						className="min-h-0 flex-1 overflow-y-auto overscroll-contain touch-pan-y"
 						style={{ WebkitOverflowScrolling: "touch" }}
 					>
