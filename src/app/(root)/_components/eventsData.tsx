@@ -172,6 +172,6 @@ export const events: EventDetailsProps[] = [
 		],
 		applyUrl: "https://www.wfii.in/india-uae-delegation-2026",
 		applyText: "Apply Now (₹99)",
-		lastDate: "20 October",
+		lastDate: "15 October",
 	},
 ];
