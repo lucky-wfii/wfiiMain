@@ -59,6 +59,10 @@ export const events: EventDetailsProps[] = [
 		applyUrl: "https://forms.gle/3U8KgMxvFD8SJNpD9",
 		applyText: "Apply Now",
 	},
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 89858c5bf5f6140e60da195ccf32b437de3f7934
 	{
 		delay: 0.4,
 		image: "/IndiaUAE.png",
