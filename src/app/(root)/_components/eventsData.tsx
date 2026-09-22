@@ -59,63 +59,7 @@ export const events: EventDetailsProps[] = [
 		applyUrl: "https://forms.gle/3U8KgMxvFD8SJNpD9",
 		applyText: "Apply Now",
 	},
-	{
-		delay: 0.4,
-		image: "/updatedScalex.jpeg",
-		imageAlt: "ScaleX by WFII 2026",
-		date: "8 & 9 September 2026",
-		dateLabel: "Two-Day Program",
-		location: "New Delhi",
-		locationLabel: "500+ Participants",
-		title: "ScaleX by WFII 2026",
-		description: (
-			<>
-				India's Premier Business Excellence Program designed to equip
-				you with practical knowledge for measurable business impact.
-			</>
-		),
-		tags: ["Business Excellence", "Two-Day Program"],
-		highlights: [
-			{
-				icon: <Trophy className="h-5 w-5" />,
-				title: "Why Should You Apply?",
-				content:
-					"Learn to standardize your product, price for profitability, build a trusted brand, and enter global markets.",
-				iconBg: "bg-amber-50",
-				iconColor: "text-amber-500",
-				borderHover: "hover:border-amber-200",
-			},
-			{
-				icon: <Briefcase className="h-5 w-5" />,
-				title: "What Awaits You?",
-				content: (
-					<>
-						<span className="font-bold text-blue-600">
-							Expert-led Masterclasses
-						</span>{" "}
-						• Practical Business Frameworks • Industry Leaders &
-						Mentors • BIS Standards & Product Excellence
-					</>
-				),
-				iconBg: "bg-blue-50",
-				iconColor: "text-blue-600",
-				borderHover: "hover:border-blue-200",
-			},
-			{
-				icon: <Sparkles className="h-5 w-5" />,
-				title: "Key Learning Areas",
-				content:
-					"Branding, Sales & Marketing • Finance & Cash Flow Management • AI for Business Growth • Government Schemes & Business Opportunities",
-				iconBg: "bg-emerald-50",
-				iconColor: "text-emerald-600",
-				borderHover: "hover:border-emerald-200",
-			},
-		],
-		applyUrl:
-			"https://docs.google.com/forms/d/e/1FAIpQLScoRx1xLnBt_nzNF7o4RhHZOG8vBP347FuhrsXimqEhZuzqxQ/viewform?pli=1",
-		applyText: "Apply Now (₹59)",
-		lastDate: "15 July 2026",
-	},
+	
 	{
 		delay: 0.4,
 		image: "/IndiaUAE.png",
